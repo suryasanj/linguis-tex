@@ -1,0 +1,306 @@
+;; 
+;;	cuneiform mapping for TeX
+;; 	filename: `cuneiform.map`
+;; 	email: ssanj@umich.edu
+;; 	
+;;	2024-06-13: text support for Royal Achæmenid Elamite, only	
+;;
+
+LHSName "Unicode/Roman"
+RHSName "Unicode/Cuneiform"
+Version "beta"
+
+pass(Unicode)
+
+;; roman script
+Define dash	U+002D
+Define dot	U+002E
+Define four	U+0034	
+Define A	U+0041	
+Define B	U+0042	
+Define C	U+0043	
+Define D	U+0044	
+Define E	U+0045	
+Define G	U+0047	
+Define H	U+0048	
+Define I	U+0049
+Define K	U+004B
+Define L	U+004C	
+Define M	U+004D	
+Define N	U+004E	
+Define P	U+0050
+Define Q	U+0051	
+Define R	U+0052	
+Define S	U+0053	
+Define T	U+0054	
+Define U	U+0055	
+Define V	U+0056
+Define Y	U+0059
+Define Z	U+0060	
+Define a	U+0061	
+Define b	U+0062	
+Define c	U+0063	
+Define d	U+0064	
+Define e	U+0065	
+Define g	U+0067	
+Define h	U+0068	
+Define i	U+0069
+Define k	U+006B
+Define l	U+006C	
+Define m	U+006D	
+Define n	U+006E	
+Define p	U+0070
+Define q	U+0071	
+Define r	U+0072	
+Define s	U+0073	
+Define t	U+0074	
+Define u	U+0075	
+Define v	U+0076
+Define y	U+0079
+Define z	U+0080
+Define AAC	U+00C1
+Define IAC	U+00CD
+Define UGR	U+00D9	
+Define agr	U+00E0	
+Define aac	U+00E1	
+Define iac	U+00ED	
+Define uac	U+00FA
+Define SH 	U+0160	
+Define sh	U+0161	
+Define smg	U+1D4D	
+Define smv	U+1D5B
+Define smh	U+02B0
+Define sml	U+02E1
+
+;; cuneiform CV and VC signs
+Define pa	U+1227A ; pa
+Define ba	U+12040 ; ba
+Define bad	U+12041 ; be
+Define pi	U+1227F ; pe ~ pi
+Define bu	U+1204D ; pu
+Define ab	U+1200A ; ap
+Define ib	U+12141 ; ip
+Define tum	U+1230B ; íp
+Define ub	U+12312 ; up
+Define sila	U+122E1 ; ka₄
+Define ki	U+121A0 ; ke ~ ki 
+Define gi	U+12100 ; ge ~ gi
+Define ku	U+121AA ; ku
+Define ak	U+1201D ; ak
+Define ig	U+12145 ; ik
+Define pirig	U+1228C ; uk
+Define da	U+12055 ; da
+Define te	U+122FC ; te
+Define ti	U+122FE ; ti
+Define tu	U+12305 ; tu
+Define du	U+1207A ; du
+Define ad	U+1201C ; at
+Define ud	U+12313 ; ut
+Define limmu	U+1243C ; šá
+Define sha	U+122AE ; šà
+Define she	U+122BA ; še
+Define igi	U+12146 ; ši
+Define shu	U+122D7 ; šu
+Define ash	U+1203E ; aš
+Define kaskal	U+1219C ; iš ~ uš
+Define sa	U+12293 ; sa
+Define za	U+1235D ; za
+Define si	U+122DB ; se ~ si
+Define ze	U+12362 ; ze ~ zi
+Define su	U+122E2 ; su ~ zu
+Define pirigza	U+1228D ; as ~ az
+Define gish	U+12111 ; is ~ iz
+Define ia	U+12140 ; ya
+Define la	U+121B7 ; la
+Define li	U+121F7 ; le ~ li
+Define lu	U+121FB ; lu
+Define ugud	U+1230C ; ul
+Define ma	U+12220 ; ma
+Define me	U+12228 ; me
+Define mi	U+1222A ; mi
+Define mu	U+1222C ; mu
+Define gudkur	U+12120 ; am
+Define um	U+1231D ; um
+Define na	U+1223E ; na
+Define ni	U+1224C ; ne ~ ni
+Define nu	U+12261	; nu
+Define an	U+1202D ; an	
+Define en	U+12097 ; en
+Define in	U+12154 ; in
+Define un	U+12326 ; un
+Define ra	U+1228F ; ra
+Define ri	U+12291 ; re ~ ri
+Define ru	U+12292 ; ru
+Define ir	U+12155 ; ir
+Define ur	U+12328 ; ur
+Define ha	U+12129 ; ha
+Define acun	U+12000 ; a
+Define ecun	U+1208A ; e
+Define hi	U+1212D ; hi
+Define icun	U+1213F	; i
+Define hu	U+12137 ; hu
+Define ucun	U+1230B ; u
+Define utwo	U+12311 ; ú
+Define hinun	U+12134 ; ah
+
+p a		<> pa
+b a 		<> ba
+b e		<> bad
+p e		<> pi
+p i 		<> pi
+p u		<> bu
+a p		<> ab
+i p		<> ib
+iac p		<> tum
+u p		<> ub
+k a four	<> sila
+q a		<> sila
+k e		<> ki
+k i		<> ki
+g e		<> gi
+g i 		<> gi
+k u		<> ku
+a k		<> ak
+i k		<> ig
+u k		<> pirig
+d a 		<> da
+t e 		<> te
+t i             <> ti
+t u             <> tu
+t u four	<> tum
+d u             <> du
+a t             <> ad
+u t             <> ud
+sh aac		<> limmu
+sh agr		<> sha
+sh e		<> she
+sh i		<> igi
+sh u 		<> shu
+a sh		<> ash
+i sh		<> kaskal
+u sh		<> kaskal
+s a             <> sa
+z a             <> za
+s e             <> si
+s i             <> si
+z e             <> ze
+z i             <> ze
+s u             <> su
+z u             <> su
+a s             <> pirigza
+a z             <> pirigza
+i s             <> gish
+i z             <> gish
+y a             <> ia
+l a             <> la
+l e             <> li
+l i             <> li
+l u             <> lu
+u l             <> ugud
+m a             <> ma
+m e             <> me
+m i             <> mi
+m u             <> mu
+a m             <> gudkur
+u m             <> um
+n a             <> na
+n e             <> ni
+n i             <> ni
+n u             <> nu
+a n             <> an
+e n             <> en
+i n             <> in
+u n             <> un
+r a             <> ra
+r e             <> ri
+r i             <> ri
+r u             <> ru
+i r             <> ir
+u r             <> ur
+h a             <> ha
+a		<> acun
+e		<> ecun
+h i		<> hi
+i		<> icun
+h u		<> hu
+u		<> ucun
+uac		<> utwo
+a h		<> hinun
+dash		<> U+200C
+dot		<> U+200C
+
+;; cuneiform CVC signs
+; TODO missing signs: kúp, kar, šir7, zik
+k a k		<> U+12195
+k a sh		<> U+12049
+k a l		<> U+12197
+k a m		<> U+12130
+k i n		<> U+121A5
+k u r		<> U+121B3
+t u p		<> U+1207E
+t a k		<> U+122F3
+t u k		<> U+12307
+t a sh		<> U+12328
+t a m		<> U+12313
+t a n		<> U+12197
+t a r 		<> U+122FB
+t u r		<> U+12309
+sh i p		<> U+12228
+sh i l		<> U+122FB
+m u z		<> U+12232
+z a p		<> U+1209F
+t a m four	<> U+12308
+m a z		<> U+12226
+m a sh		<> U+12226
+r a k		<> U+122A9
+r aac sh	<> U+12307
+p aac t		<> U+12041
+p a n		<> U+1227C
+p aac r		<> U+12047
+p iac r		<> U+1209F
+k aac n		<> U+120F7
+k iac n		<> U+1212F
+t a l		<> U+12291
+t i n 		<> U+12077
+z i r		<> U+1209F
+h a l		<> U+1212C
+h a r		<> U+1212F
+l a k		<> U+12260
+m a t		<> U+121B3
+m i t		<> U+12041
+m a n		<> U+1230B U+1230B
+m i n		<> U+122A9
+m u r		<> U+1212F
+n a p		<> U+1202E
+r a p		<> U+120F2
+r a t		<> U+122E5
+
+;; cuneiform logograms
+A				<> U+12000
+A N dot K A M			<> U+1202D U+12130
+A N SH U dot A dot A B dot B A	<> U+12032 U+12000 U+1200A U+12040
+A N SH U dot K U R dot R A	<> U+12032 U+121B3 U+1228F
+I T U				<> U+1231A
+U L dot H I			<> U+1230C U+1212D
+D U B				<> U+1207E
+G I SH dot M AAC		<> U+12111 U+12223
+H A L				<> U+1212C
+H A R				<> U+1212F
+K A S K A L			<> U+1219C
+; K I dot M I N			<> U+121A0 
+K UGR dot B A B B A R		<> U+121AC U+12313
+K U R				<> U+121B3
+S A G				<> U+12295
+K U SH				<> U+122E2
+K UGR SH			<> U+12311
+SH U				<> U+122D7
+D U M U				<> U+12309
+N U M U N			<> U+121B0
+U D U 				<> U+121FB
+Z IAC Z				<> U+1203E
+
+;; cuneiform determinatives
+sml smg		<> U+1238C
+smv		<> U+12079
+smh		<> U+12038
+
