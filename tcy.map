@@ -1,0 +1,317 @@
+;;
+;;	tulu mapping for TeX 
+;;	filename: `tcy.map`
+;;  	email: ssanj@umich.edu
+;;  	
+;;	2024-06-14: text support for Kannada script only
+;;  
+
+LHSName "Unicode/ISO 15919"
+RHSName "Unicode/Tulu"
+Version "beta"
+
+; pass unicode
+pass(NFD)
+pass(Unicode)
+
+; roman base character inputs
+Define a        U+0061
+Define b        U+0062
+Define c        U+0063
+Define d        U+0064
+Define e        U+0065
+Define f        U+0066
+Define g        U+0067
+Define h        U+0068
+Define i        U+0069
+Define j        U+006A
+Define k        U+006B
+Define l        U+006C
+Define m        U+006D
+Define n        U+006E
+Define o        U+006F
+Define p        U+0070
+Define q        U+0071
+Define r        U+0072
+Define s        U+0073
+Define t        U+0074
+Define u        U+0075
+Define v        U+0076
+Define w        U+0077
+Define y        U+0079
+Define z        U+007A
+Define dash	U+002D
+Define dot	U+002E
+Define equal	U+003D
+Define quote	U+2018
+UniClass[upper] = (U+0041 .. U+005A)
+UniClass[lower] = (U+0061 .. U+007A)
+[upper] 	> [lower]
+
+; diacritics and special characters
+Define ac	U+00B4  ; acute above
+Define brva	U+0306	; breve above
+Define bbi	U+032F	; breve below (inverted)
+Define cara	U+030C  ; caron above
+Define dota	U+0307	; dot above
+Define eng	U+014B  ; eng
+Define ep	U+03B5	; epsilon
+Define db	U+0323	; dot below
+Define maca	U+0304	; macron above
+Define mb	U+0331 	; macron below
+Define rb	U+0325  ; ring below
+Define suph	U+02B0  ; superscript h
+Define tila	U+0303	; tilde above
+Define vb	U+0329  ; vertical line below
+Define ze	U+03B6	; zeta
+U+0395		> U+03B5
+U+0396 		> U+03B6
+
+; define standalone indic characters
+Define asvar	U+0C85
+Define aasvar	U+0C86
+Define wsvar	U+0C85 U+0CCD ; 	overshort u
+Define wwsvar	U+0C85 U+0CD5 U+0CCD ;	overshort u long
+Define isvar	U+0C87
+Define iisvar	U+0C88
+Define usvar	U+0C89
+Define uusvar	U+0C8A
+Define rsvar	U+0C8B
+Define esvar	U+0C8E
+Define eesvar	U+0C8F
+Define aesvar	U+0C8E U+0CCD ;		overshort e
+Define aeesvar	U+0C8E U+0CD5 U+0CCD ;	overshort e long
+Define aisvar	U+0C90
+Define osvar	U+0C92
+Define oosvar	U+0C93
+Define ausvar	U+0C94
+Define ka	U+0C95
+Define kha	U+0C96
+Define ga	U+0C97
+Define gha	U+0C98
+Define nga	U+0C99
+Define ca	U+0C9A
+Define cha	U+0C9B
+Define ja	U+0C9C
+Define jha	U+0C9D
+Define nya	U+0C9E
+Define tta	U+0C9F
+Define ttha	U+0CA0
+Define dda	U+0CA1
+Define ddha	U+0CA2
+Define nna	U+0CA3
+Define ta	U+0CA4
+Define tha	U+0CA5
+Define da	U+0CA6
+Define dha	U+0CA7
+Define na	U+0CA8
+Define pa	U+0CAA
+Define pha	U+0CAB
+Define ba	U+0CAC
+Define bha	U+0CAD
+Define ma	U+0CAE
+Define ya	U+0CAF
+Define ra	U+0CB0
+Define la	U+0CB2
+Define va	U+0CB5
+Define llla	U+0CDE
+Define lla	U+0CB3
+Define rra	U+0CB1
+Define sha	U+0CB6
+Define ssa	U+0CB7
+Define sta	U+0CB8 U+0CCD U+0C9F ; stukaara
+Define sa	U+0CB8
+Define ha	U+0CB9
+
+; define space characters
+Define zwnj     U+200C ; ZERO WIDTH NON-JOINER
+Define zwj      U+200D ; ZERO WIDTH JOINER
+Define hiatus   U+0020 ; SPACE
+Define nbsp     U+00A0 ; NO-BREAK SPACE
+
+; define matras
+Define aamatr	U+0CBE
+Define wmatr	U+0CCD zwnj ; 			overshort u
+Define wwmatr	U+0CCD U+0CD5 zwnj ;		overshort u long
+Define imatr	U+0CBF
+Define iimatr	U+0CC0
+Define umatr	U+0CC1
+Define uumatr	U+0CC2
+Define rmatr	U+0CC3
+Define ematr	U+0CC6
+Define eematr	U+0CC7
+Define aematr	U+0CC6 U+0CCD zwnj ;		overshort e
+Define aeematr	U+0CC6 U+0CCD U+0CD5 zwnj ;	overshort e long
+Define aimatr	U+0CC8
+Define omatr	U+0CCA
+Define oomatr	U+0CCB
+Define aumatr	U+0CCC
+Define virama	U+0CCD
+Define anu	U+0C82 ; anusvara
+Define vis      U+0C83 ; visarga
+
+; define numbers
+Define zero     U+0CE6
+Define one      U+0CE7
+Define two      U+0CE8
+Define three    U+0CE9
+Define four     U+0CEA
+Define five     U+0CEB
+Define six      U+0CEC
+Define seven    U+0CED
+Define eight    U+0CEE
+Define nine     U+0CEF
+pass(NFD)
+pass(Unicode)
+
+; define punctuation
+Define danda	U+0964
+Define dbldanda	U+0965
+
+; simplify input encoding
+rb > vb
+Define utcy	u brva ;			overshort u
+Define etcy	ep ;				overshort e
+Define ai 	a i ;				vocalic ai
+Define au 	a u ;				vocalic au
+a i bbi		> ai
+a u bbi		> au
+
+; map (some) letters
+b		<> ba
+b h		<> bha
+b suph		<> bha
+c		<> ca
+c cara		<> ca
+c cara h	<> ca
+c cara suph	<> ca
+c h		<> cha
+c suph		<> cha
+d		<> da
+d db		<> dda
+d db h		<> ddha
+d db suph	<> ddha
+d h		<> dha
+d suph		<> dha
+dash		>
+dot		>
+eng		<> nga
+equal		>
+g		<> ga
+g h		<> gha
+g suph		<> gha
+h		<> ha
+h bbi		> vis
+h db		> vis
+j		<> ja
+j cara		<> ja
+j cara h	<> jha
+j cara suph	<> jha
+j h		<> jha
+j suph		<> jha
+k		<> ka
+k h		<> kha
+k suph		<> kha
+l		<> la
+l db		<> lla
+l mb		<> llla
+m		<> ma
+m bbi 		> anu
+m dota		> anu
+n		<> na
+n cara		<> nya
+n dota		<> nga
+n db		<> nna
+n tila		<> nya
+p		<> pa
+p h		<> pha
+p suph		<> pha
+quote		>
+r		<> ra
+r db		<> llla
+r mb		<> rra
+r vb		<> rsvar
+s		<> sa
+s ac		<> sha
+s cara		<> sha
+s db		<> ssa
+t		<> ta
+t db		<> tta
+t db h		<> ttha
+t db suph	<> ttha
+t h		<> tha
+t suph		<> tha
+v		<> va
+y		<> ya
+ze		<> sta
+
+; map numbers
+U+0030 		> zero
+U+0031 		> one
+U+0032 		> two
+U+0033 		> three
+U+0034 		> four
+U+0035 		> five
+U+0036 		> six
+U+0037 		> seven
+U+0038 		> eight
+U+0039 		> nine
+
+; map punctuation
+U+007C    	<> danda
+U+007C U+007C	<> dbldanda
+pass(Unicode)
+
+; map vowels
+UniClass[short_vowel_eng] 	= (a     i     u     e     o    );
+UniClass[short_vowel_tcy]	= (asvar isvar usvar esvar osvar);
+UniClass[long_vowel_tcy] 	= (aasvar iisvar uusvar eesvar oosvar);
+[short_vowel_eng] 		> [short_vowel_tcy]
+[short_vowel_eng] maca	 	> [long_vowel_tcy]
+ai				<> aisvar
+au				<> ausvar
+utcy				<> wsvar
+utcy maca			<> wwsvar
+etcy				<> aesvar
+etcy maca			<> aeesvar
+pass(Unicode)
+
+; turn vowels into matras after consonants
+UniClass[consonants_tcy] 	= (ka .. ha)
+UniClass[matra_vowels_tcy]	= (aasvar .. ausvar)
+UniClass[matras_tcy]		= (aamatr .. aumatr)
+[matra_vowels_tcy] / [consonants_tcy] _ 	> [matras_tcy]
+[matra_vowels_tcy] / llla _ 	> [matras_tcy]
+asvar / llla _			> zwnj
+wsvar / [consonants_tcy] _	> wsvar zwnj
+pass(Unicode)
+
+; add anusvara when homorganic
+UniClass[velar]			= (ka .. gha)
+UniClass[palatal]		= (ca .. jha)
+UniClass[retroflex]		= (tta .. ddha)
+UniClass[dental]		= (ta .. dha)
+UniClass[bilabial]		= (pa .. bha)
+UniClass[consonants_tcy] 	= (ka .. ha)
+nga / _ [velar]			> anu
+nya / _ [palatal]		> anu
+nna / _ [retroflex]		> anu
+na / _ [dental]			> anu
+ma / _ [bilabial]		> anu
+
+; add viramas for conjuncts
+[consonants_tcy] / _ [consonants_tcy] 		> [consonants_tcy] virama
+llla / _ [consonants_tcy]	> llla virama
+pass(Unicode)
+
+; add viramas for final consonants
+UniClass[consonants_tcy] 	= (ka .. ha)
+UniClass[matras_tcy]		= (aamatr .. aumatr)
+UniClass[novirama]		= ([matras_tcy] asvar virama)
+[consonants_tcy] / _ ^[novirama] 		<> [consonants_tcy] virama
+pass(Unicode)
+
+; no matra if a is the vowel
+UniClass[consonants_tcy] 	= (ka .. ha)
+[consonants_tcy] asvar 		<> [consonants_tcy]
+pass(Unicode)
