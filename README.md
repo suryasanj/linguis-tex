@@ -12,9 +12,9 @@ a QWERTY keyboard. Mapping allows one to type in a commonly used transcription
 scheme, outputting Unicode characters in the target script.
 
 
-*  **Royal Achæmenid Elamite Cuneiform**: `elx.tec`<br/>
+*  **Royal Achæmenid Elamite Cuneiform** [`elx.tec`](mapping/elx.tec)</br>
    Signs are derived from Paper’s (1955) list. Some signs are missing: namely, «kúp», 
    «kar», «šir₇», «zik», and two logograms for man and king. Use the normal 
-   transcription scheme for RAE (with ‹z› instead of ‹ṣ〉), with one minor change: 
+   transcription scheme for RAE (with ‹z› instead of ‹ṣ›), with one minor change: 
    the vertical and horizontal determinatives, as well as the logogram sign, 
    should be written in Unicode superscript.
